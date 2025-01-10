@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     triggers {
-        pollSCM '* * * * *'
+        pollSCM 'H/2 * * * *'
     }
 
      stages {
@@ -11,7 +11,6 @@ pipeline {
                 echo "Building.."
                 sh '''
                 cd myapp
-                # pip install -r requirements.txt
                 '''
             }
         }
