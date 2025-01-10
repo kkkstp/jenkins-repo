@@ -1,5 +1,5 @@
 def hw():
     print('doing function')
-    retrun 10
+    return 10
 
 hw()
