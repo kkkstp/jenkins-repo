@@ -15,6 +15,7 @@ pipeline {
             steps {
                 echo "Testing.."
                 sh '''
+                cd myapp
                 python3 hw.py
                 '''
             }
