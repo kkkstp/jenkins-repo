@@ -14,6 +14,7 @@ pipeline {
         stage('#1 test') {
             steps {
                 echo "run app"
+                echo "${params.first_val} ${params.second_val}"
                 sh '''
                 ls -l
                 cd myapp
