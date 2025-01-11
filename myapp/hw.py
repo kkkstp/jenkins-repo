@@ -1,4 +1,4 @@
 def hw():
     return 10
 
-hw()
+print(hw())
