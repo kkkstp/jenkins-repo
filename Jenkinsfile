@@ -17,7 +17,7 @@ pipeline {
                 sh '''
                 ls -l
                 cd myapp
-                python3 calculate.py ${params.first_val} ${params.second_val}
+                python3 calculate.py $params.first_val $params.second_val
                 '''
             }
         }
