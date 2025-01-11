@@ -1,37 +1,18 @@
 pipeline {
     agent any
     
-    triggers {
-        pollSCM 'H/2 * * * *'
-    }
+//    triggers {
+//        pollSCM 'H/2 * * * *'
+//    }
 
      stages {
-        stage('Build') {
+        stage('#1') {
             steps {
-                echo "Building.."
-                sh '''
-                cd myapp
-                '''
-            }
-        }
-        stage('Test') {
-            steps {
-                echo "Testing.."
+                echo "run app"
                 sh '''
                 cd myapp
                 python3 hw.py
                 '''
-            }
-        }
-        stage('Deliver') {
-            agent {
-                docker {
-                    image 'alpine'
-                }
-            }
-            steps {
-                echo 'Deliver....'
-                sh 'hostname'
             }
         }
     }
