@@ -15,6 +15,7 @@ pipeline {
             steps {
                 echo "run app"
                 sh '''
+                ls -l
                 cd myapp
                 python3 calculate.py ${params.first_val} ${params.second_val}
                 '''
